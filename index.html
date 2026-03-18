@@ -72,15 +72,16 @@
 
     <script>
         // Firebase Yapılandırması
-        const firebaseConfig = {
-            apiKey: "AIzaSyDpNKkeCmkJB4-w1zyD9PZ8WDrCFfzUrjc",
-            authDomain: "mesajger-7d7af.firebaseapp.com",
-            projectId: "mesajger-7d7af",
-            storageBucket: "mesajger-7d7af.firebasestorage.app",
-            messagingSenderId: "433074782256",
-            appId: "1:433074782256:web:c7251b88c00f86d182edf5",
-            databaseURL: "https://mesajger-7d7af-default-rtdb.firebaseio.com" // Veritabanı URL'sini kontrol et
-        };
+const firebaseConfig = {
+    apiKey: "AIzaSyDpNKkeCmkJB4-w1zyD9PZ8WDrCFfzUrjc",
+    authDomain: "mesajger-7d7af.firebaseapp.com",
+    projectId: "mesajger-7d7af",
+    storageBucket: "mesajger-7d7af.firebasestorage.app",
+    messagingSenderId: "433074782256",
+    appId: "1:433074782256:web:c7251b88c00f86d182edf5",
+    // BURAYI KONSOLDAKİ LİNK İLE DEĞİŞTİR:
+    databaseURL: "https://mesajger-7d7af-default-rtdb.europe-west1.firebasedatabase.app" 
+};
 
         firebase.initializeApp(firebaseConfig);
         const db = firebase.database();
