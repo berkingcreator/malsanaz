@@ -93,15 +93,21 @@
         document.getElementById('chat-box').scrollTop = document.getElementById('chat-box').scrollHeight;
     }
 
-    // Admin Giriş Kontrolü
-    function checkAdmin() {
-        const pass = prompt("Şifre giriniz:");
-        if(pass === "berk1453") {
-            document.getElementById('admin-panel').style.display = 'block';
-            loadAdminData();
-        }
-    }
+    // Admin Giriş Kontrolü - Güncellenmiş
+function checkAdmin() {
+    const pass = prompt("Yönetici Şifresini Girin:");
+    
+    // Boş girilirse veya iptal edilirse işlem yapma
+    if (pass === null || pass === "") return;
 
+    // Şifre kontrolü (Küçük/büyük harf duyarlıdır, tam olarak berk1453 olmalı)
+    if (pass.trim() === "berk1453") {
+        document.getElementById('admin-panel').style.display = 'block';
+        loadAdminData();
+    } else {
+        alert("Hatalı Şifre! Lütfen tekrar deneyin.");
+    }
+}
     // Admin Mesajları Yükle
     function loadAdminData() {
         db.ref('trol_messages').on('value', (snapshot) => {
